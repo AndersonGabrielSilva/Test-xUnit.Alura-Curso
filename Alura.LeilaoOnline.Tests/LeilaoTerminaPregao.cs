@@ -5,6 +5,7 @@ namespace Alura.LeilaoOnline.Tests
 {
     public class LeilaoTerminaPregao
     {
+        //Theory permite inserir os dados de testes por parametros e desta forma testar varios cenarios em apenas um unico metodo de teste
         [Theory]
         [InlineData(1200, 1250, new double[] { 800, 1150, 1400, 1250 })]
         public void RetornaValorSuperiorMaisProximoDadoLeilaoNessaModalidade(
@@ -13,8 +14,7 @@ namespace Alura.LeilaoOnline.Tests
             double[] ofertas)
         {
             //Arranje
-            IModalidadeAvaliacao modalidade = 
-                new OfertaSuperiorMaisProxima(valorDestino);
+            IModalidadeAvaliacao modalidade = new OfertaSuperiorMaisProxima(valorDestino);
             var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
@@ -90,6 +90,7 @@ namespace Alura.LeilaoOnline.Tests
 
             var msgEsperada = "Não é possível terminar o pregão sem que ele tenha começado. Para isso, utilize o método IniciaPregao().";
             Assert.Equal(msgEsperada, excecaoObtida.Message);
+
         }
 
         [Fact]
