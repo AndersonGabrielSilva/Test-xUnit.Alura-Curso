@@ -5,6 +5,10 @@
     /*
         Forma dos 3A para escrever  teste
 
+        O padrão Arrange-Act-Assert determina que dividamos o teste em 3 seções: uma para definir as condições de entrada (Arrange),
+        outra para indicar qual método está sob teste (Act) e
+        outra para verificar as expectativas de saída (Assert).
+
         1ª Arrange
         Nesta etapa nós configuramos tudo o que é necessário para que o nosso teste possa rodar, inicializamos variáveis, criamos alguns test doubles como Mocks ou Spies dentre outras coisas.
         
